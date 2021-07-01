@@ -8,11 +8,33 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link href="css/styles.css" rel="stylesheet" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+
+    <script type="text/JavaScript" src="https://www.kayak.com/affiliate/widget-v2.js"></script>
+
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+
+
     <title>Hello, world!</title>
   <style>
+    
+    body {
+      background-image: url("img/letemhurryby.png");
+      background-attachment: fixed;
+    }
+    .col-2 {
+      background-image: url("img/lhb200px.png");
+      background-repeat: no-repeat;
+      background-position: right bottom;
+    }
+    h1 {
+      height: 200px;
+      color: hsla(120, 100%, 50%, 1);
+      background-color: hsla(225, 100%, 50%, .5);
+      background-image: url("img/lhb100px.png");
+      background-repeat: no-repeat;
+      background-position: top right;
+    }
 
 
     .grid-container {
@@ -24,6 +46,7 @@
       padding: 10px;
     }
     .grid-item {
+      opacity: 0.3;
       background-color: rgba(255, 255, 255, 0.8);
       border: 1px solid rgba(0, 0, 0, 0.8);
       padding: 20px;
@@ -44,8 +67,9 @@
       transition-timing-function: cubic-bezier(.2,-0.5,.8,-0.4);
     }
 
+
     .ns {
-      height: 500px;
+      height: 225px;
       width: 100%;
       display: inline-block;
       background: url("img/letemhurryby.png") no-repeat center;
@@ -98,17 +122,62 @@
   </script>
   </head>
   <body>
+    <div class="container-fluid">
+      <h1>My Webpage</h1>
+    </div>
+
+    <div class="container-fluid">
+      <div style="height: 500px">
+        <script> 
+          window.onSpotifyWebPlaybackSDKReady = () => {
+            const token = '[BQCHKR_jOBkRKeAPMJ9aVa_b3_47FHU9PJTERDfduVr8Sn1HlRE1U8HgCigZgn0mbY3PByD28LiMiQQxg6R_2oWviMhGByO5M7cr3_KxeLPbdGiwoizFOU2oHPDuLsU9q1n-StezxT_R-Kd2PSpqSUJ9cmkpCczIt2w]';
+            const player = new Spotify.Player({
+              name: 'Web Playback SDK Quick Start Player',
+              getOAuthToken: cb => { cb(token); }
+            });
+
+            // Error handling
+            player.addListener('initialization_error', ({ message }) => { console.error(message); });
+            player.addListener('authentication_error', ({ message }) => { console.error(message); });
+            player.addListener('account_error', ({ message }) => { console.error(message); });
+            player.addListener('playback_error', ({ message }) => { console.error(message); });
+
+            // Playback status updates
+            player.addListener('player_state_changed', state => { console.log(state); });
+
+            // Ready
+            player.addListener('ready', ({ device_id }) => {
+              console.log('Ready with Device ID', device_id);
+            });
+
+            // Not Ready
+            player.addListener('not_ready', ({ device_id }) => {
+              console.log('Device ID has gone offline', device_id);
+            });
+
+            // Connect to the player!
+            player.connect();
+          };
+        </script>
+      </div>
+    </div>
+
+
     <div class="grid-container">
       <a href="https://www.google.com"><div id="myBtn" class="grid-item">G</div></a>
       <a href="https://www.bovada.com"><div id="myBtn" class="grid-item">B</div></a>
       <a href="https://www.mtdendeavor.com"><div id="myBtn" class="grid-item">MTD</div></a>
-      <a href="#"><div id="myBtn" class="grid-item">LM</div></a>
-      <a href="#"><div id="myBtn" class="grid-item">Launch modal</a>
-      <a href="#"><div id="myBtn" class="grid-item">6</div></a>
-      <a href="#"><div id="myBtn" class="grid-item">7</div></a>
-      <a href="#"><div id="myBtn" class="grid-item">8</div></a>
-      <a href="#"><div id="myBtn" class="grid-item">9</div></a>
-      <a href="#"><div id="myBtn" class="grid-item">10</div></a>
+      <a href="#myModal"><div id="myBtn" class="grid-item">LM</div></a>
+      <a href="#"><div id="myBtn" class="grid-item">Launch modal</div></a>
+      <a href="#"><div id="myBtn" class="grid-item" style="background-color: rgba(238,125,238,.8)">6</div></a>
+      <a href="#">
+        <div id="myBtn" class="grid-item" style="background-color: hsla(225,100%,50%,.2)">
+          <p style="color: white">7</p>
+        </div>
+      </a>
+      <a href="#"><div id="myBtn" class="grid-item" style="background-color: hsla(225,100%,50%,.4)"><p style="color: white">8</p></div></a>
+      <a href="#"><div id="myBtn" class="grid-item" style="background-color: hsla(225,100%,50%,.8)"><p style="color: white">9</p></div></a>
+      <a href="#"><div id="myBtn" class="grid-item" style="background-color: hsla(225,100%,50%,1)"><p style="color: white">10</p></div></a>
       <a href="#"><div id="myBtn" class="grid-item">11</div></a>
       <a href="#"><div id="myBtn" class="grid-item">12</div></a>
       <a href="#"><div id="myBtn" class="grid-item">13</div></a>
@@ -151,29 +220,66 @@
     <div class="container-xl">
         <div class="row">
           <div class="col-8">
-            <img src="img/letemhurryby.png" class="img-thumbnail" alt="Cinque Terre">
+            <img src="img/North-star.png" class="img-thumbnail">
           </div>
           <div class="col-2">
-            <img src="img/letemhurryby.png" class="grid-item img-thumbnail" alt="Cinque Terre">
+            <img src="img/letemhurryby.png" class="img-thumbnail">
           </div>
           <div class="col-2">
-            <img src="img/letemhurryby.png" class="grid-item img-thumbnail" alt="Cinque Terre">
+            <img src="img/letemhurryby.png" class="img-thumbnail">
           </div>
         </div>
       </div>
     </div>
     <div class="container-xl">
       <div class="row">
-        <div class="col-8"><p>second container</p><div class="ns"></div></div>
-        <div class="col-4"><p>third container</p><div class="ns"></div></div>
+        <div class="col-6"><p>second container</p><div class="ns"></div></div>
+        <div class="col-3"><div id="kayakSearchWidgetContainer" class="ns"></div></div>
+        <div id="kayakSearchWidgetContainer" class="col-3"><p>third container</p>
+
+          <script type="text/javaScript">
+          KAYAK.embed({
+          container: document.getElementById("kayakSearchWidgetContainer"),
+          hostname: "www.kayak.com",
+          autoPosition: true,
+          defaultProduct: "flights",
+          enabledProducts: ["hotels", "flights"],
+          startDate: "2018-10-02",
+          endDate: "2018-10-28",
+          origin: "Denver, CO",
+          destination: "Norfolk, VA",
+          ssl: true,
+          affiliateId: "acme_corp",
+          isInternalLoad: false,
+          lc: "en",
+          cc: "us",
+          mc: "EUR"
+          });
+          </script>
+
+        </div>
       </div>
     </div>
+
+
+
+
+
+
 
 
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
