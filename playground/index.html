@@ -130,7 +130,7 @@
       <div style="height: 500px">
         <script> 
           window.onSpotifyWebPlaybackSDKReady = () => {
-            const token = '[BQCHKR_jOBkRKeAPMJ9aVa_b3_47FHU9PJTERDfduVr8Sn1HlRE1U8HgCigZgn0mbY3PByD28LiMiQQxg6R_2oWviMhGByO5M7cr3_KxeLPbdGiwoizFOU2oHPDuLsU9q1n-StezxT_R-Kd2PSpqSUJ9cmkpCczIt2w]';
+            const token = 'BQCHKR_jOBkRKeAPMJ9aVa_b3_47FHU9PJTERDfduVr8Sn1HlRE1U8HgCigZgn0mbY3PByD28LiMiQQxg6R_2oWviMhGByO5M7cr3_KxeLPbdGiwoizFOU2oHPDuLsU9q1n-StezxT_R-Kd2PSpqSUJ9cmkpCczIt2w';
             const player = new Spotify.Player({
               name: 'Web Playback SDK Quick Start Player',
               getOAuthToken: cb => { cb(token); }
@@ -158,9 +158,48 @@
             // Connect to the player!
             player.connect();
           };
+
+
+          // const play = ({
+          //   spotify_uri,
+          //   playerInstance: {
+          //     _options: {
+          //       getOAuthToken,
+          //       id
+          //     }
+          //   }
+          // }) => {
+          //   getOAuthToken(access_token => {
+          //     fetch(`https://api.spotify.com/v1/me/player/play?device_id=${id}`, {
+          //       method: 'PUT',
+          //       body: JSON.stringify({ uris: [spotify_uri] }),
+          //       headers: {
+          //         'Content-Type': 'application/json',
+          //         'Authorization': `Bearer ${access_token}`
+          //       },
+          //     });
+          //   });
+          // };
+
+          // play({
+          //   playerInstance: new Spotify.Player({ name: "..." }),
+          //   spotify_uri: 'spotify:track:1sbEeUY8KsdvgiQi26JBFz',
+          // });
+
+
+          player.connect().then(success => {
+            if (success) {
+              console.log('The Web Playback SDK successfully connected to Spotify!');
+            }
+          })
+
         </script>
       </div>
     </div>
+
+
+
+        <iframe src="https://open.spotify.com/embed/track/1sbEeUY8KsdvgiQi26JBFz" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
 
     <div class="grid-container">
