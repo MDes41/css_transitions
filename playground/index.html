@@ -1,1 +1,1106 @@
 
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="css/styles.css" rel="stylesheet" crossorigin="anonymous">
+    
+
+    <script type="text/JavaScript" src="https://www.kayak.com/affiliate/widget-v2.js"></script>
+    <script type="text/JavaScript" src="js/scss.js"></script>
+
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+
+
+    <title>Hello, world!</title>
+  <style>
+    
+    body {
+      background-image: url("img/letemhurryby.png");
+      background-attachment: fixed;
+    }
+    .col-2 {
+      background-image: url("img/lhb200px.png");
+      background-repeat: no-repeat;
+      background-position: right bottom;
+    }
+    h1 {
+      height: 200px;
+      color: hsla(120, 100%, 50%, 1);
+      background-color: hsla(225, 100%, 50%, .5);
+      background-image: url("img/lhb100px.png");
+      background-repeat: no-repeat;
+      background-position: top right;
+    }
+    .lessons {
+      background-color: hsla(200, 100%, 50%, .7)
+    }
+
+    .confidence {
+      background-image: url("img/confidence300px.png");
+      width: 100%;
+      height: 500px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .confidenceblue {
+      background-image: url("img/confidenceblue.png");
+      width: 100%;
+      height: 500px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .white{
+      background-color: rgba(255,255,255,0.8);
+    }
+
+    .five {
+      height: 500px;
+    }
+    .seven {
+      height: 750px;
+       position: absolute;
+       top: 1500px;
+       right: 0px;
+       bottom: 0px;
+       left: 0px;
+       background-color: red;
+    }
+    iframe {
+      position: relative; !important
+      display: block;
+    }
+    h2 {
+      color: hsla(255, 100%, 50%, 1);
+    }
+
+    .grid-container {
+      display: grid;
+      grid-gap: 1px;
+      grid-template-columns: auto auto auto auto;
+      background: url("img/North-star.png") no-repeat center;
+      background-color: #2196F3;
+      padding: 10px;
+    }
+    .grid-item {
+      opacity: 0.3;
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+      -webkit-transition-duration: 1.5s;
+      transition-duration: 1.5s;
+        }
+
+    .grid-item:hover, .grid-item:focus, .grid-item:active {
+      background:  #2196f3;
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+      -webkit-transition-timing-function: cubic-bezier(.2,-0.5,.8,-0.4);
+      transition-timing-function: cubic-bezier(.2,-0.5,.8,-0.4);
+    }
+
+
+    .ns {
+      height: 225px;
+      width: 100%;
+      display: inline-block;
+      background: url("img/letemhurryby.png") no-repeat center;
+      vertical-align: middle;
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+      position: relative;
+      -webkit-transition-property: color;
+      transition-property: color;
+      -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+    }
+
+    .ns:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      /*background: #2098D1;*/
+      background: url(""img/North-star.png"") no-repeat center;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transform-origin: 0 50%;
+      transform-origin: 0 50%;
+      -webkit-transition-property: transform;
+      transition-property: transform;
+      -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+      -webkit-transition-timing-function: ease-out;
+      transition-timing-function: ease-out;
+    }
+    .ns:hover, .ns:focus, .ns:active {
+      color: white;
+    }
+    .ns:hover:before, .ns:focus:before, .ns:active:before {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+
+    }
+
+    @media only screen and (max-width: 319px) {
+      .mylogo {
+        height: 700px;
+        background-image: url(img/logo400px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        vertical-align: middle;
+      }
+    }
+  
+    @media only screen and (min-width: 320px) and (max-width: 1040px) {
+      .mylogo {
+        height: 700px;
+        background-image: url(img/logo400px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        vertical-align: middle;
+      }
+    }
+    @media only screen and (min-width:  1041px){
+      .mylogo {
+        height: 700px;
+        background-image: url(img/logo400px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        vertical-align: middle;
+      }
+    }
+
+    .collogo:hover{
+      cursor: pointer;
+    }
+
+    html, body {
+      margin: 0px;
+      padding: 0px;
+    }
+    .outside{
+      margin: auto auto;
+      position: relative;
+      height: 630px;
+      width: 90%;
+      border: 5px solid blue;
+    }
+    .outside > iframe {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      max-height: 630px;
+      max-width: 1120px;
+      top: 0px;
+      left: 0px;  
+      border: 5px solid orange;    
+    }
+    img {
+      width: 100%;
+      display: block;      
+      position: relative;
+    }
+
+  </style>
+  <script>
+
+    $('#myModel').modal();
+   
+
+    function play() {
+        var audio = document.getElementById("audio");
+        audio.play();
+      }
+    </script>
+
+  </script>
+  </head>
+  <body>
+
+    <audio id="audio" >
+      <source src="music/humbletrim.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col collogo mylogo" onclick="play()"></div>
+      </div>
+    </div>
+    
+    <div class="container-fluid">
+      <div class="row white">
+        <div class="col"><div class="confidence"></div></div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col"><div class="five"></div></div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row white">
+        <div class="col"><div class="confidenceblue"></div></div>
+      </div>
+    </div>
+
+
+<style>
+* {box-sizing: border-box}
+.mySlides1, .mySlides2 {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.wrapperi {
+  width: 80%; 
+  max-width: 1000px; 
+  height: 80%; 
+  margin: 50px auto; 
+  background: rgba(6, 0, 0, .7);
+}
+
+.h_iframei {
+  position: relative; 
+  padding-top: 56%;
+}
+.h_iframei img {
+  padding: 20px 20px 20px 20px;
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%;
+}
+.wrapper {
+  width: 80%; 
+  max-width: 1000px; 
+  height: 80%; 
+  margin: 50px auto; 
+  background: #CCC
+}
+
+.h_iframe {
+  position: relative; 
+  padding-top: 56%;
+}
+.h_iframe iframe {
+  padding: 5px 5px 5px 5px;
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%;
+}
+
+</style>
+
+<h2 style="text-align:center">Multiple Slideshows</h2>
+
+<p>Slideshow 1:</p>
+<div class="slideshow-container">
+  <div class="mySlides1">
+    <div class="wrapper">
+      <div class="h_iframe">
+          <iframe height="315" width="560" loading="lazy" src="https://www.youtube.com/embed/nSLg_DmCQBU" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- <img src="img/confidence300px.png" style="width:100%"> -->
+  </div>
+
+  <div class="mySlides1">
+        <div class="wrapper">
+      <div class="h_iframe">
+          <iframe height="315" width="560" loading="lazy" src="https://www.youtube.com/embed/4-079YIasck" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="mySlides1">
+    <div class="wrapper">
+      <div class="h_iframe">
+          <iframe height="315" width="560" loading="lazy" src="https://www.youtube.com/embed/pLbSlC0Pucw" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="mySlides1">
+    <div class="wrapperi">
+      <div class="h_iframei">
+          <img src="img/logo1000px.png">
+      </div>
+    </div>
+  </div>
+  <div class="mySlides1">
+    <div class="wrapperi">
+      <div class="h_iframei">
+          <img src="img/logo600px.png">
+      </div>
+    </div>
+  </div>
+  <div class="mySlides1">
+    <div class="wrapperi">
+      <div class="h_iframei">
+          <img src="img/logo400px.png">
+      </div>
+    </div>
+  </div>
+
+
+  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+</div>
+
+<p>Slideshow 2:</p>
+<div class="slideshow-container">
+  <div class="mySlides2">
+    <img src="img/logo1000px.png" style="width:100%" max-height="750px">
+  </div>
+
+  <div class="mySlides2">
+    <img src="img/logo600px.png" style="width:100%" max-height="750px">
+  </div>
+
+  <div class="mySlides2">
+    <img src="img/logo400px.png" style="width:100%" max-height="750px">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+</div>
+
+
+
+<script>
+var slideIndex = [1,1];
+var slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+    <style>
+
+    /*html,body        {height: 100%;}*/
+
+
+
+    </style>
+
+    <div class="wrapperi">
+      <div class="h_iframei">
+        <img src="img/confidence.png" style="width:100%"> 
+      </div>
+    </div>
+
+
+    <div class="wrapper">
+      <div class="h_iframe">
+          <iframe height="315" width="560" src="https://www.youtube.com/embed/nSLg_DmCQBU" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-6 text-center">
+            <div class="wrapper">
+              <div class="h_iframe">
+                  <iframe height="315" width="560" src="https://www.youtube.com/embed/4-079YIasck" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 text-center">
+            <div class="wrapper">
+              <div class="h_iframe">
+                  <iframe height="315" width="560" src="https://www.youtube.com/embed/pLbSlC0Pucw" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div>  
+
+
+    <div class="container-fluid">
+      <div class="row">
+        <!-- <div class="col-3"></div> -->
+        <div class="col-12 text-center"><iframe width="560" height="315" src="https://www.youtube.com/embed/pLbSlC0Pucw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        </div>
+        <!-- <div class="col-3"></div> -->
+    </div>
+
+    <div class="container-fluid">
+      <h1>My Webpage</h1>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2>Things</h2>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="lessons col-12 text-center">
+          <h2>How can I participate in my Karma more wisely while being a fool?</h2>
+          <h2>How can I give the most happiness?</h2>
+          <h2>How can I be more considerate?</h2>
+          <h2>The seeker way not the pouter way.  Patience without pouting. What could you do better now for the now.  Spread love, love, everywhere with compassion and consideration</h2>
+          <h2>You can't do two things at once no matter how good you think you are.</h2>
+          <h2>Watch how you treat the people</h2>
+          <h2>Thankful yet humble without guilt</h2>
+          <h2>Silent yet outgoing</h2>
+          <h2>Non threatening laughter</h2>
+          <h2>Ambition without grandiose</h2>
+          <h2>Patience with determination</h2>
+          <h2>Desire-less intent</h2>
+          <h2>Don't be rude or condenscending</h2>
+          <h2>Condense</h2>
+          <h2>Eye contact</h2>
+          <h2>Feel special without ego</h2>
+          <h2>Share everything without ego</h2>
+          <h2>Dominate without being dominant</h2>
+          <h2>Going along with the group may be right but may be wrong</h2>
+          <h2>Know how your mind works, but don't assume you know</h2>
+          <h2>You may surprise yourself, don't assume you know</h2>
+          <h2>Overhearing information does not give you the right to talk about it</h2>
+          <h2>Don't belittle people.  Don't make another feel less important.  Don't take a compliment if it makes someone else fee less important</h2>
+          <h2>It's ok to be yourself</h2>
+          <h2>Don't be afraid of yourself.  You are who you are and people like it or don't like it, don't feel like you have to be like everybody else BE YOURSELF</h2>
+          <h2>Do I not care about people and only care that they like me and don't care about them if they don't like me?</h2>
+          <h2>Better to keep your hands to yourself in public unless you ask permission, you don't own another person like property. Oh so and so is mine</h2>
+          <h2>I like style</h2>
+          <h2>How can you trust another person will make you feel good after you make them feel good?</h2>
+          <h2>Waiting to be vindicated, for what?  You are already vindicated doing what you are doing!  Be proud of the person you already are.</h2>
+          <h2>Don't break the hand that feeds you</h2>
+          <h2></h2>
+
+        
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div style="height: 500px"></div>
+    </div>
+
+
+
+    <style>
+	.hvr-bounce-to-bottom-birds-1 {
+	  display: inline-block;
+	  vertical-align: middle;
+	  -webkit-transform: perspective(1px) translateZ(0);
+	  transform: perspective(1px) translateZ(0);
+	  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	  position: relative;
+	  -webkit-transition-property: color;
+	  transition-property: color;
+	  -webkit-transition-duration: 0.5s;
+	  transition-duration: 0.5s;
+	}
+
+	.hvr-bounce-to-bottom-birds-1:before {
+	  content: "";
+	  position: absolute;
+	  z-index: -1;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	  background-image: url("img/birds/birds1-1.JPG");
+	  background-size:100% 100%;	  
+	  -webkit-transform: scaleY(0);
+	  transform: scaleY(0);
+	  -webkit-transform-origin: 50% 0;
+	  transform-origin: 50% 0;
+	  -webkit-transition-property: transform;
+	  transition-property: transform;
+	  -webkit-transition-duration: 0.5s;
+	  transition-duration: 0.5s;
+	  -webkit-transition-timing-function: ease-out;
+	  transition-timing-function: ease-out;
+	}
+	.hvr-bounce-to-bottom-birds-1:hover, .hvr-bounce-to-bottom-birds-1:focus, .hvr-bounce-to-bottom-birds-1:active {
+	  color: white;
+	}
+	.hvr-bounce-to-bottom-birds-1:hover:before, .hvr-bounce-to-bottom-birds-1:focus:before, .hvr-bounce-to-bottom-birds-1:active:before {
+	  -webkit-transform: scaleY(1);
+	  transform: scaleY(1);
+	  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+	  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+	}
+
+	.hvr-bounce-to-bottom-birds-2 {
+	  display: inline-block;
+	  vertical-align: middle;
+	  -webkit-transform: perspective(1px) translateZ(0);
+	  transform: perspective(1px) translateZ(0);
+	  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	  position: relative;
+	  -webkit-transition-property: color;
+	  transition-property: color;
+	  -webkit-transition-duration: 0.5s;
+	  transition-duration: 0.5s;
+	}
+
+	.hvr-bounce-to-bottom-birds-2:before {
+	  content: "";
+	  position: absolute;
+	  z-index: -1;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	  background-image: url("img/birds/birds2-2.JPG");
+	  background-size:100% 100%;	  
+	  -webkit-transform: scaleY(0);
+	  transform: scaleY(0);
+	  -webkit-transform-origin: 50% 0;
+	  transform-origin: 50% 0;
+	  -webkit-transition-property: transform;
+	  transition-property: transform;
+	  -webkit-transition-duration: 0.5s;
+	  transition-duration: 0.5s;
+	  -webkit-transition-timing-function: ease-out;
+	  transition-timing-function: ease-out;
+	}
+	.hvr-bounce-to-bottom-birds-2:hover, .hvr-bounce-to-bottom-birds-2:focus, .hvr-bounce-to-bottom-birds-2:active {
+	  color: white;
+	}
+	.hvr-bounce-to-bottom-birds-2:hover:before, .hvr-bounce-to-bottom-birds-2:focus:before, .hvr-bounce-to-bottom-birds-2:active:before {
+	  -webkit-transform: scaleY(1);
+	  transform: scaleY(1);
+	  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+	  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+	}
+	</style>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-6 hvr-bounce-to-bottom-birds-1">
+				<a class="myImages " id="myImg" href="img/birds/birds1.JPG" target="_blank">
+				   <img src="img/birds/birds1.JPG" alt="description" style="z-index: -2; width: 100%">
+				</a>
+			</div>
+			<div class="col-6 hvr-bounce-to-bottom-birds-2">
+				<a class="myImages" id="myImg" href="img/birds/birds2.JPG" target="_blank">
+				   <img src="img/birds/birds2.JPG" alt="description" style="z-index: -2;width: 100%">
+				</a>
+			</div>
+		</div>
+	</div>	
+
+
+    <div class="birds"></div>
+
+
+
+
+
+
+
+
+
+    <style>
+    .grid-container a p {
+    	padding: 0;
+    	margin: 0;
+    }
+	</style>
+
+
+
+
+
+    <script>
+      $('#myModel').modal();
+      $('#myModelgrid1').modal( );
+    </script>
+
+    <div id="grid"></div>
+
+
+    <div class="grid-container">
+      <a href="https://www.google.com"><div id="myBtn" class="grid-item">G</div></a>
+      <a href="https://www.bovada.com"><div id="myBtn" class="grid-item">B</div></a>
+      <a href="https://www.mtdendeavor.com"><div id="myBtn" class="grid-item">MTD</div></a>
+      <a href="#myModalgrid1" role="button" class="grid-item" data-toggle="modal">LM</a>
+      <a href="#"><div id="myBtn" class="grid-item">Launch modal</div></a>
+      <a href="#"><div id="myBtn" class="grid-item" style="background-color: rgba(238,125,238,.8)">6</div></a>
+      <a href="#">
+        <div id="myBtn" class="grid-item" style="background-color: rgba(238,125,238,.8)">
+          <p style="color: white">7</p>
+        </div>
+      </a>
+      <a href="#"><div id="myBtn" class="grid-item" style="background-color: rgba(238,125,238,.8)">
+      	<p style="color: white">8</p></div></a>
+      <a href="#"><div id="myBtn" class="grid-item" style="background-color: rgba(238,125,238,.8)">
+      	<p style="color: white">9</p></div></a>
+      <a href="#"><div id="myBtn" class="grid-item" style="background-color: rgba(238,125,238,.8)">
+      	<p style="color: white">10</p></div></a>
+      <a href="#"><div id="myBtn" class="grid-item">11</div></a>
+      <a href="#"><div id="myBtn" class="grid-item">12</div></a>
+      <a href="#"><div id="myBtn" class="grid-item">13</div></a>
+      <a href="#"><div id="myBtn" class="grid-item">14</div></a>
+      <a href="#"><div id="myBtn" class="grid-item">15</div></a>
+      <a href="#"><div id="myBtn" class="grid-item">16</div></a>
+      <a href="#"><div id="myBtn" class="grid-item">17</div></a>
+      <a href="#"><div id="myBtn" class="grid-item">18</div></a>
+      <a href="#"><div id="myBtn" class="grid-item">19</div></a>
+      <a href="#"><div id="myBtn" class="grid-item">20</div></a>
+      <a href="#"><div id="myBtn" class="grid-item">21</div></a>
+      <a href="#"><div id="myBtn" class="grid-item">22</div></a>
+      <a href="#"><div id="myBtn" class="grid-item">23</div></a>
+      <a href="#"><div id="myBtn" class="grid-item">24</div></a>
+
+
+    </div> 
+
+
+    <style>
+    html {
+		scroll-behavior: smooth;
+	}
+
+	a {
+		text-decoration: none;
+		color: black;
+	} 
+
+	#down {
+		/*margin-top: 100%;*/
+		/*padding-bottom: 25%;*/
+	} 
+    </style>
+
+	<a href="#down">Click Here to Smoothly Scroll Down</a>
+
+	<?php
+		echo "My first PHP script!";
+	?> 
+
+
+    <?php include 'gridModal1.php'; ?>
+
+
+
+
+
+
+
+
+    <div class="container-fluid py-3">
+        <a href="#myModal" role="button" class="btn btn-primary" data-toggle="modal">Launch modal</a>
+    </div>
+
+    <div id="myModal" class="modal fade" tabindex="-1" data-show="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="myModalLabel">Modal header</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+                <div class="modal-body">
+                  <div class="wrapper">
+                    <div class="h_iframe">
+                        <iframe height="315" width="560" src="https://www.youtube.com/embed/nSLg_DmCQBU" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                    <p>One fine body…</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                    <button class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-xl">
+        <div class="row">
+          <div class="col-8">
+            <img src="img/North-star.png" class="img-thumbnail">
+          </div>
+          <div class="col-2">
+            <img src="img/letemhurryby.png" class="img-thumbnail">
+          </div>
+          <div class="col-2">
+            <img src="img/letemhurryby.png" class="img-thumbnail">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-xl">
+      <div class="row">
+        <div class="col-6"><p>second container</p><div class="ns"></div></div>
+        <div class="col-3"><div id="kayakSearchWidgetContainer" class="ns"></div></div>
+        <div id="kayakSearchWidgetContainer" class="col-3"><p>third container</p>
+
+          <script type="text/javaScript">
+          KAYAK.embed({
+          container: document.getElementById("kayakSearchWidgetContainer"),
+          hostname: "www.kayak.com",
+          autoPosition: true,
+          defaultProduct: "flights",
+          enabledProducts: ["hotels", "flights"],
+          startDate: "2018-10-02",
+          endDate: "2018-10-28",
+          origin: "Denver, CO",
+          destination: "Norfolk, VA",
+          ssl: true,
+          affiliateId: "acme_corp",
+          isInternalLoad: false,
+          lc: "en",
+          cc: "us",
+          mc: "EUR"
+          });
+          </script>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="container-fluid">
+      <div class="row">
+        <!-- <div class="col-3"></div> -->
+        <div class="col-12 text-center"></div>
+        </div>
+        <!-- <div class="col-3"></div> -->
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- <div class="col-3"></div> -->
+        <div class="col-12 text-center"></div>
+        </div>
+        <!-- <div class="col-3"></div> -->
+    </div>    
+    <div class="container-fluid">
+      <div class="row">
+        <!-- <div class="col-3"></div> -->
+        <div class="col-12 text-center"></div>
+        </div>
+        <!-- <div class="col-3"></div> -->
+    </div>
+   
+
+
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<style>
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+</style>
+
+
+<h1>Custom Range Slider</h1>
+<p>Drag the slider to display the current value.</p>
+
+<div class="slidecontainer">
+  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+  <p>Value: <span id="demo"></span></p>
+</div>
+
+<script>
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+</script>
+
+
+
+
+
+
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col"><div class="mylogo"></div></div>
+      </div>
+    </div>
+    <div class="pgend"></div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12"><h1>Email: mtdendeavor@gmail.com </h1></div>
+        <div class="col-12"><h1>If you found this page it's no accident</h1></div>
+      </div>
+    </div>    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <style>
+   
+    iframe {
+      border: 2px solid blue;
+    }
+
+    .pgend {
+        height: 700px;
+        background-image: url("img/North-star.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        vertical-align: middle;
+      }
+    .pgend30K {
+      height:  30000px;
+    }
+
+
+    .wrapperp {
+      width: 100%; 
+      max-width: 1000px; 
+      height: 80%; 
+      margin: 0 auto; 
+      background: #CCC
+    }
+
+    .h_iframep {
+      position: relative; 
+      padding-top: 56%;
+    }
+    .h_iframep iframe {
+      position: absolute; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 100%;
+    }
+
+
+   
+  </style>
+
+
+
+
+
+
+
+
+
+
+    
+    <div class="pgend30K"></div>
+    <div class="pgend30K"></div>
+    <div class="pgend30K"></div>
+
+
+	  <div id="down">
+	    <a href="#grid"><h1>You are down! Click here to go back to grid</h1></a>
+	  </div>
+
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-6 text-center">
+            <div class="wrapperp">
+              <div class="h_iframep">
+                  <iframe height="315" width="560" loading="lazy" src="img/mov/x/girl10.mp4" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 text-center">
+            <div class="wrapperp">
+              <div class="h_iframep">
+                  <iframe height="315" width="560" loading="lazy" src="img/mov/x/girl15.mp4" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div>  
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-6 text-center">
+            <div class="wrapperp">
+              <div class="h_iframep">
+                  <iframe height="315" width="560" loading="lazy" src="img/mov/x/girl20.mp4" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 text-center">
+            <div class="wrapperp">
+              <div class="h_iframep">
+                  <iframe height="315" width="560" loading="lazy" src="img/mov/x/girl7.mp4" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div>  
+
+
+
+
+
+
+    <div class="pgend30K"></div>
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
